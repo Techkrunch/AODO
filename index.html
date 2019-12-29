@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Defining AODA Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar nav">
+      <em class="logo">
+        <img
+          src="logo.png"
+          width="30"
+          height="30"
+          class="logo"
+          alt=""
+          title="Home"
+          aria-label="Home"
+        />
+        <a href="index.html" title="Home" aria-label="Home" class="full-text">
+          Accessibility for Ontarians with Disabilities Act
+        </a>
+
+        <a
+          href="/"
+          title="Home_Mobile"
+          aria-label="Home_Mobile"
+          class="abbr-text"
+        >
+          AODA Accessibility
+        </a>
+      </em>
+      <button
+        type="button"
+        class="btn btn-warning"
+        onclick="return toggleContrast();"
+        id="contrast-link"
+        role="checkbox"
+        aria-checked="false"
+      >
+        High Contrast
+      </button>
+    </nav>
+    <nav class="no_nav">
+      <ul>
+        <li>
+          <a href="index.html" class="canada-current"
+            ><span>Defining AODA Web</span></a
+          >
+        </li>
+        <li>
+          <a href="Get_AODA_Web_Compliant/Get_AODA_Web_Compliant.html" class=""
+            ><span>Get AODA Web Compliant</span></a
+          >
+        </li>
+        <li>
+          <a href="Our_AODA_Experts/Our_AODA_Experts.html" class=""
+            ><span>Our AODA Experts</span></a
+          >
+        </li>
+        <li>
+          <a href="About_AODA_Canada/About_AODA_Canada.html" class=""
+            ><span>About AODA Canada</span></a
+          >
+        </li>
+        <li>
+          <a href="Our_Clients/Our_Clients.html" class=""
+            ><span>Our Clients</span></a
+          >
+        </li>
+        <li>
+          <a href="Testimonials/Testimonials.html" class=""
+            ><span>Testimonials</span></a
+          >
+        </li>
+        <li>
+          <a href="Contact_AODA_Canada/Contact_AODA_Canada.html" class=""
+            ><span>Contact AODA Canada</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function setContrastHigh() {
+        document.body.classList.add("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "Reset contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "true");
+        set_cookie("style", "high-contrast");
+      }
+
+      function resetContrast() {
+        document.body.classList.remove("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "High contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "false");
+        delete_cookie("style");
+      }
+
+      if (document.cookie.indexOf("high-contrast") >= 0) {
+        if (
+          document.body === undefined ||
+          document.body.classList === undefined ||
+          document.body.classList.add === undefined
+        ) {
+          // Old IE Fix
+          window.onload = function() {
+            if (document.body.classList !== undefined) {
+              setContrastHigh();
+            }
+          };
+        } else {
+          setContrastHigh();
+        }
+      }
+
+      function toggleContrast() {
+        if (document.cookie.indexOf("high-contrast") >= 0) {
+          resetContrast();
+        } else {
+          setContrastHigh();
+        }
+        return false;
+      }
+
+      function set_cookie(name, value) {
+        document.cookie = name + "=" + value + "; Path=/;";
+      }
+      function delete_cookie(name) {
+        document.cookie =
+          name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+      }
+    </script>
+    <main class="page-content page-pad" id="body">
+      <h1 class="add-title center ">Defining AODA Web</h1>
+      <div class="ad-detail-content">
+        <p>
+          The Accessibility for Ontarians with Disabilities Act (AODA) aims to
+          develop, implement and enforce accessibility standards in order to
+          achieve accessibility for Ontarians with disabilities with respect to
+          public websites for private/non-profit organization or a public sector
+          organization.
+        </p>
+
+        <br />
+        <h2 class="add-title">AODA Web deadlines</h2>
+        <p>
+          “Beginning January 1, 2021: all public websites and web content posted
+          after January 1, 2012 must meet WCAG 2.0 Level AA other than criteria
+          1.2.4 (live captions) and 1.2.5 (pre-recorded audio descriptions)” -
+          Government of Ontario
+        </p>
+        <hr />
+
+        <h2 class="add-title">AODA Web accessibility requirements.</h2>
+
+        <p>
+          Each guideline has three levels of accessibility: A, AA and AAA.
+        </p>
+        <blockquote class="b-quote">
+          <ul>
+            <li>Newly created or refreshed websites must meet level A.</li>
+            <li>
+              Later, your website will need to meet Level AA.
+            </li>
+            <li>
+              Meeting Level AAA is not required at this time.
+            </li>
+          </ul>
+        </blockquote>
+        <hr />
+        <h2 class="add-title">How AODA Canada helps you comply.</h2>
+
+        <p>
+          AODA Canada Consultants comply your public website and its content to
+          meet WCAG 2.0, as outlined in the Accessibility Standard act for
+          Information and Communications.
+        </p>
+
+        <p>
+          When you choose AODA Canada Consultants, you’re choosing to work with
+          experts who are Ontarians and trusted by Ontarians.
+        </p>
+      </div>
+
+      <div class="center">
+        <p><a href="#body">Back to top</a></p>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-8 col-xs-12 wow fadeIn animated animated f-left"
+              data-wow-delay="0.2s"
+              style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">
+                  Accessibility for Ontarians with Disabilities Act
+                </h2>
+
+                <p>Copyright AODA.ca Inc. ©2019</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4  col-xs-12 wow fadeIn animated animated f-right"
+              data-wow-delay="0.6s"
+              style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">Contact Information</h2>
+                <div class="twitter-content clearfix">
+                  <p>
+                    aoda@aodacanada.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- content ends here -->
+    <script
+      type="text/javascript"
+      src="//acc.magixite.com/license/la?litk=ok57qgkpx6"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

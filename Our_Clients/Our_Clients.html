@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Our Clients</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar nav">
+      <em class="logo">
+        <img
+          src="../logo.png"
+          width="30"
+          height="30"
+          class="logo"
+          alt=""
+          title="Home"
+          aria-label="Home"
+        />
+        <a
+          href="../index.html"
+          title="Home"
+          aria-label="Home"
+          class="full-text"
+        >
+          Accessibility for Ontarians with Disabilities Act
+        </a>
+
+        <a
+          href="../"
+          title="Home_Mobile"
+          aria-label="Home_Mobile"
+          class="abbr-text"
+        >
+          AODA Accessibility
+        </a>
+      </em>
+      <button
+        type="button"
+        class="btn btn-warning"
+        onclick="return toggleContrast();"
+        id="contrast-link"
+        role="checkbox"
+        aria-checked="false"
+      >
+        High Contrast
+      </button>
+    </nav>
+    <nav class="no_nav">
+      <ul>
+        <li>
+          <a href="../index.html" class=""><span>Defining AODA Web</span></a>
+        </li>
+        <li>
+          <a
+            href="../Get_AODA_Web_Compliant/Get_AODA_Web_Compliant.html"
+            class=""
+            ><span>Get AODA Web Compliant</span></a
+          >
+        </li>
+        <li>
+          <a href="../Our_AODA_Experts/Our_AODA_Experts.html" class=""
+            ><span>Our AODA Experts</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="../About_AODA_Canada/About_AODA_Canada.html"
+            class="canada-current"
+            ><span>About AODA Canada</span></a
+          >
+        </li>
+        <li>
+          <a href="Our_Clients.html" class=""><span>Our Clients</span></a>
+        </li>
+        <li>
+          <a href="../Testimonials/Testimonials.html" class=""
+            ><span>Testimonials</span></a
+          >
+        </li>
+        <li>
+          <a href="../Contact_AODA_Canada/Contact_AODA_Canada.html" class=""
+            ><span>Contact AODA Canada</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function setContrastHigh() {
+        document.body.classList.add("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "Reset contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "true");
+        set_cookie("style", "high-contrast");
+      }
+
+      function resetContrast() {
+        document.body.classList.remove("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "High contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "false");
+        delete_cookie("style");
+      }
+
+      if (document.cookie.indexOf("high-contrast") >= 0) {
+        if (
+          document.body === undefined ||
+          document.body.classList === undefined ||
+          document.body.classList.add === undefined
+        ) {
+          // Old IE Fix
+          window.onload = function() {
+            if (document.body.classList !== undefined) {
+              setContrastHigh();
+            }
+          };
+        } else {
+          setContrastHigh();
+        }
+      }
+
+      function toggleContrast() {
+        if (document.cookie.indexOf("high-contrast") >= 0) {
+          resetContrast();
+        } else {
+          setContrastHigh();
+        }
+        return false;
+      }
+
+      function set_cookie(name, value) {
+        document.cookie = name + "=" + value + "; Path=/;";
+      }
+      function delete_cookie(name) {
+        document.cookie = name + "=; Path=/;";
+      }
+    </script>
+
+    <!-- body begins here -->
+    <main class="page-content   center" id="body">
+      <h1 class="add-title center">Our Clients.</h1>
+      <div class="container">
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/csi.png"
+              alt="Canadian Securities Institute"
+              class="img-responsive"
+            />
+            <figcaption>
+              Canadian Securities Institute
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/mac.png"
+              alt="Moody Analytics Canada"
+              class="img-responsive"
+            />
+            <figcaption>Moody's Analytics Canada</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/acma.png"
+              alt="Accreditation Council for Medical Affairs"
+              class="img-responsive"
+            />
+            <figcaption>
+              Canadian Securities Institute
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- first row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/rsl.jpg"
+              alt="RK Statistics Ltd"
+              class="img-responsive"
+            />
+            <figcaption>
+              RK Statistics Ltd
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/am.jpg"
+              alt="Andaman Medical Canada"
+              class="img-responsive"
+            />
+            <figcaption>Andaman Medical</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img src="res/p.png" alt="Pharmasave" class="img-responsive" />
+            <figcaption>
+              Pharmasave
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- Second row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/pcg.png"
+              alt="Pharmasave img"
+              class="img-responsive"
+            />
+            <figcaption>
+              Pharmasave
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/fsp.jpg"
+              alt="Family Services of Peel (Since 1971)"
+              class="img-responsive"
+            />
+            <figcaption>Family Services of Peel - Since 1971</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/ns.png"
+              alt="Nyaliswiss Sagl"
+              class="img-responsive"
+            />
+            <figcaption>
+              Nyaliswiss Sagl
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- Third row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/amw.jpg"
+              alt=" Acadustri Medical Writing"
+              class="img-responsive"
+            />
+            <figcaption>
+              Acadustri Medical Writing
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/evc.jpg"
+              alt="Expert Validation Consulting (Incorporated)"
+              class="img-responsive"
+            />
+            <figcaption>Expert Validation Consulting, Inc.</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/kc.png"
+              alt="  King's College London"
+              class="img-responsive"
+            />
+            <figcaption>
+              King's College London
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 4th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img src="res/amidis.png" alt=" Amidis AG" class="img-responsive" />
+            <figcaption>
+              Amidis AG
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/hpc.png"
+              alt="Hildebrand Pharma Consulting Brand"
+              class="img-responsive"
+            />
+            <figcaption>Hildebrand Pharma Consulting</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/ihl.png"
+              alt="IHL Consulting Group, Inc."
+              class="img-responsive"
+            />
+            <figcaption>
+              IHL Consulting Group, Inc.
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 5th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img src="res/Pharmine.png" alt="Pharmine" class="img-responsive" />
+            <figcaption>
+              Pharmine
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/tps.png"
+              alt="Titanium Partners Sàrl Brand"
+              class="img-responsive"
+            />
+            <figcaption>Titanium Partners Sàrl</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/mu.png"
+              alt="Montreux University"
+              class="img-responsive"
+            />
+            <figcaption>
+              Montreux University
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 6th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/rhc.png"
+              alt="Robert Half Canada"
+              class="img-responsive"
+            />
+            <figcaption>
+              Robert Half Canada
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/lsg.png"
+              alt="The Lion’s Share Group Brand"
+              class="img-responsive"
+            />
+            <figcaption>The Lion’s Share Group</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/iccd.jpg"
+              alt="International Center for Capacity Development."
+              class="img-responsive"
+            />
+            <figcaption>
+              International Center for Capacity Development.
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 7th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/otc.jpg"
+              alt="One1000 Training and Consulting."
+              class="img-responsive"
+            />
+            <figcaption>
+              One1000 Training and Consulting.
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/nagima.png"
+              alt="NAGIMA Consulenza Brand"
+              class="img-responsive"
+            />
+            <figcaption>NAGIMA Consulenza.</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/ugot.png"
+              alt="UGOT Active Kids"
+              class="img-responsive"
+            />
+            <figcaption>
+              UGOT Active Kids
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 8th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/ttsaff.jpg"
+              alt="The Toronto South African Film Festival."
+              class="img-responsive"
+            />
+            <figcaption>
+              The Toronto South African Film Festival.
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/cpc.jpg"
+              alt="Credence Pharma Consulting Brand"
+              class="img-responsive"
+            />
+            <figcaption>Credence Pharma Consulting.</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img src="res/ggs.png" alt="GT Group Sàrl" class="img-responsive" />
+            <figcaption>
+              GT Group Sàrl.
+            </figcaption>
+          </div>
+        </div>
+
+        <!-- 9th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img src="res/omj.png" alt="OMJ Mortgage." class="img-responsive" />
+            <figcaption>
+              OMJ Mortgage.
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/mantra.png"
+              alt="Mantra Exclusive Brand"
+              class="img-responsive"
+            />
+            <figcaption>Mantra Exclusive.</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/foka.png"
+              alt="Foka International"
+              class="img-responsive"
+            />
+            <figcaption>
+              Foka International.
+            </figcaption>
+          </div>
+        </div>
+        <!-- 10th row ends -->
+        <div class="row">
+          <div class="column img-hover-zoom">
+            <img
+              src="res/cways.png"
+              alt="C Ways Group Brand"
+              class="img-responsive"
+            />
+            <figcaption>
+              C Ways Group.
+            </figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img
+              src="res/epc.png"
+              alt="East Park Communications Brand"
+              class="img-responsive"
+            />
+            <figcaption>East Park Communications.</figcaption>
+          </div>
+          <div class="column img-hover-zoom">
+            <img src="res/itbd.png" alt="ITBD Group" class="img-responsive" />
+            <figcaption>
+              ITBD Group.
+            </figcaption>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="center">
+        <p><a href="#body">Back to top</a></p>
+      </div>
+    </main>
+    <!-- Footer Begins -->
+    <footer>
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-8 col-xs-12 wow fadeIn animated animated f-left"
+              data-wow-delay="0.2s"
+              style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">
+                  Accessibility for Ontarians with Disabilities Act
+                </h2>
+
+                <p>Copyright AODA.ca Inc. ©2019</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4  col-xs-12 wow fadeIn animated animated f-right"
+              data-wow-delay="0.6s"
+              style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">Contact Information</h2>
+                <div class="twitter-content clearfix">
+                  <p>
+                    aoda@aodacanada.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- body ends here -->
+    <!-- <script
+      type="text/javascript"
+      src="//acc.magixite.com/license/la?litk=ok57qgkpx6"
+    ></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

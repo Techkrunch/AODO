@@ -1,0 +1,439 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100% !important;
+  margin: 0 !important;
+}
+.content {
+  padding: 20px !important;
+  min-height: 100% !important;
+  margin: 0 auto -50px !important;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: sans-serif;
+
+  -ms-text-size-adjust: 100%;
+
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  color: #212121 !important;
+}
+.nav {
+  background-color: rgb(46, 48, 175);
+  color: white !important;
+  /* font-size: 0.5rem; */
+}
+hr.invisible {
+  border: 0px solid red;
+  padding: 5px;
+}
+.logo .full-text {
+  display: inline;
+}
+
+.logo .abbr-text {
+  display: none;
+}
+
+@media screen and (max-width: 620px) {
+  .logo .full-text {
+    display: none;
+  }
+
+  .logo .abbr-text {
+    display: inline;
+  }
+}
+
+/*  */
+.high-contrast,
+.high-contrast * {
+  background-color: black !important;
+  color: white !important;
+  border-color: white !important;
+  box-shadow: none !important;
+}
+
+.high-contrast a.canada-button {
+  border: 1px solid white;
+}
+
+.high-contrast a,
+.high-contrast button {
+  box-shadow: none !important;
+  text-decoration: underline !important;
+  color: white !important;
+}
+
+.high-contrast a:hover,
+.high-contrast a:visited {
+  box-shadow: none !important;
+  text-decoration: underline !important;
+  color: white !important;
+}
+
+.high-contrast button:hover,
+.high-contrast button:visited {
+  border: 1px solid white !important;
+  box-shadow: none !important;
+  text-decoration: underline !important;
+  color: white !important;
+}
+
+.high-contrast .canada-button-list a {
+  border: 1px solid white;
+}
+
+.high-contrast button,
+.high-contrast input[type="submit"] {
+  border: 1px solid white;
+}
+
+.high-contrast .canada-alert-success::before {
+  background-color: white;
+}
+
+.high-contrast .canada-media_block {
+  border: 2px solid white !important;
+}
+
+.high-contrast .canada-footer {
+  border-top: 1px solid white !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+a:hover {
+  /* text-decoration: none !important; */
+  background-color: none !important;
+  color: red;
+}
+
+/* 
+a {
+  text-decoration: none;
+  position: relative !important;
+} 
+a:after {
+  border-radius: 1em;
+  padding-bottom: 0.8 rem;
+  border-top: 0.1em solid #2f56b0;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 0.14em;
+  left: 0;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
+}
+
+a:hover:after {
+  right: 0;
+} */
+
+/* 
+*/
+.no_nav {
+  background-color: #f6f3f3;
+  border-bottom: 1px solid #a3b3d3;
+  clear: both;
+  display: block;
+  padding-left: 1.5rem;
+  z-index: 10;
+}
+
+.no_nav ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.no_nav ul > li {
+}
+.no_nav ul li {
+  display: inline-block;
+}
+
+.no_nav ul li {
+  display: inline-block;
+  text-align: left;
+}
+
+@media screen and (min-width: 620px) {
+  .no_nav ul li {
+    width: unset;
+  }
+}
+
+.no_nav a {
+  color: #3b3f46 !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 4rem;
+  padding: 0 1.1rem;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+.no_nav a:hover span {
+  text-decoration: none;
+  background-color: none !important;
+  color: #005cfb;
+  font-size: bold;
+}
+.no_nav .canada-current span {
+  color: #212121;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .no_nav a {
+    line-height: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .no_nav a:hover span {
+    padding-bottom: 0.3rem;
+  }
+
+  .no_nav .canada-current span {
+    padding-bottom: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .no_nav a {
+    line-height: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+footer .footer-Content {
+  background-color: #222;
+  padding: 10px 0;
+  color: #fff;
+}
+footer p {
+  color: white !important;
+}
+
+.textwidget {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #fff;
+}
+
+footer .menu {
+  padding-left: 0;
+}
+
+footer .menu li {
+  float: left;
+  width: 50%;
+  padding-bottom: 0px;
+}
+
+footer .menu li a {
+  color: #fff;
+}
+
+footer .menu li a:hover {
+  color: #03a9f4;
+}
+
+.block-title {
+  margin: 0 0 50px;
+  font-size: 1.1rem;
+}
+
+.ad-detail-content {
+  margin-top: 30px;
+}
+
+.ad-detail-content p {
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.ad-detail-content blockquote {
+  padding: 0px;
+  background: #eee;
+  border-left: 3px solid #03a9f4;
+}
+.page-pad {
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+.item-list.make-grid .photobox,
+.item-list.make-grid .add-desc-box,
+.item-list.make-grid .price-box {
+  flex: 100%;
+  max-width: 100%;
+  clear: both;
+}
+
+.item-list.make-grid .add-desc-box {
+  padding: 10px 0;
+}
+.b-quote {
+  background-color: #ffffff !important;
+  padding: 0px !important;
+}
+.center {
+  font-weight: bold;
+  text-align: center;
+  float: center;
+}
+.center a {
+  color: #106be0 !important;
+}
+
+.h1-pad {
+  padding-bottom: 10px;
+  padding-top: 0;
+}
+.img-profile {
+  width: 200px;
+  height: 200px;
+}
+
+figcaption {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.img-hover-zoom {
+  height: 20%; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform 0.2s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+.img-responsive {
+  padding-left: 20px !important;
+  width: 150px;
+}
+
+.img-left {
+  float: left;
+}
+.img-right {
+  float: right;
+  text-align: right;
+}
+.img-text {
+  clear: both;
+}
+.f-right {
+  float: right;
+}
+.t-right {
+  text-align: right;
+}
+
+/*  */
+/*  */
+
+.adds-wrapper {
+  background: #fff;
+  clear: both;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+.adds-wrapper .item-list:hover {
+}
+
+.adds-wrapper .add-title {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+.add-image i {
+  padding-right: 3px;
+}
+
+/* Style the container/contact section */
+.containers {
+  border-radius: 0px;
+  background-color: #f8f5f5;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.columns {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+    margin-top: 0;
+  }
+}

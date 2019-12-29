@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar nav">
+      <em class="logo">
+        <img
+          src="../logo.png"
+          width="30"
+          height="30"
+          class="logo"
+          alt=""
+          title="Home"
+          aria-label="Home"
+        />
+        <a
+          href="../index.html"
+          title="Home"
+          aria-label="Home"
+          class="full-text"
+        >
+          Accessibility for Ontarians with Disabilities Act
+        </a>
+
+        <a
+          href="../"
+          title="Home_Mobile"
+          aria-label="Home_Mobile"
+          class="abbr-text"
+        >
+          AODA Accessibility
+        </a>
+      </em>
+      <button
+        type="button"
+        class="btn btn-warning"
+        onclick="return toggleContrast();"
+        id="contrast-link"
+        role="checkbox"
+        aria-checked="false"
+      >
+        High Contrast
+      </button>
+    </nav>
+    <nav class="no_nav">
+      <ul>
+        <li>
+          <a href="../index.html" class=""><span>Defining AODA Web</span></a>
+        </li>
+        <li>
+          <a
+            href="../Get_AODA_Web_Compliant/Get_AODA_Web_Compliant.html"
+            class=""
+            ><span>Get AODA Web Compliant</span></a
+          >
+        </li>
+        <li>
+          <a href="../Our_AODA_Experts/Our_AODA_Experts.html" class=""
+            ><span>Our AODA Experts</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="../About_AODA_Canada/About_AODA_Canada.html"
+            class="canada-current"
+            ><span>About AODA Canada</span></a
+          >
+        </li>
+        <li>
+          <a href="../Our_Clients/Our_Clients.html" class=""
+            ><span>Our Clients</span></a
+          >
+        </li>
+        <li>
+          <a href="Testimonials.html" class=""><span>Testimonials</span></a>
+        </li>
+        <li>
+          <a href="../Contact_AODA_Canada/Contact_AODA_Canada.html" class=""
+            ><span>Contact AODA Canada</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function setContrastHigh() {
+        document.body.classList.add("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "Reset contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "true");
+        set_cookie("style", "high-contrast");
+      }
+
+      function resetContrast() {
+        document.body.classList.remove("high-contrast");
+        document.getElementById("contrast-link").innerHTML = "High contrast";
+        document
+          .getElementById("contrast-link")
+          .setAttribute("aria-checked", "false");
+        delete_cookie("style");
+      }
+
+      if (document.cookie.indexOf("high-contrast") >= 0) {
+        if (
+          document.body === undefined ||
+          document.body.classList === undefined ||
+          document.body.classList.add === undefined
+        ) {
+          // Old IE Fix
+          window.onload = function() {
+            if (document.body.classList !== undefined) {
+              setContrastHigh();
+            }
+          };
+        } else {
+          setContrastHigh();
+        }
+      }
+
+      function toggleContrast() {
+        if (document.cookie.indexOf("high-contrast") >= 0) {
+          resetContrast();
+        } else {
+          setContrastHigh();
+        }
+        return false;
+      }
+
+      function set_cookie(name, value) {
+        document.cookie = name + "=" + value + "; Path=/;";
+      }
+      function delete_cookie(name) {
+        document.cookie = name + "=; Path=/;";
+      }
+    </script>
+
+    <!-- body begins here -->
+    <main class="page-content page-pad" id="body">
+      <h1 class="add-title center">Testimonials</h1>
+      <hr class="invisible"/>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img
+                        src="res/1.png"
+                        alt="Pharma Consult Global"
+                        width="60%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        I would like to thank AODA Canada who helped us comply
+                        with AODA regulation and training our staff on all the
+                        AODA best practices. AODA Canada has provided a very
+                        impressive website and online training service, it can
+                        not have been easy for you at times, you have
+                        successfully managed to guide the seasoned partners of
+                        Pharma Consult Global in the deployment of new AODA best
+                        practices.
+                      </p>
+                      <br />
+                      <p>
+                        <b>
+                          John DR Jolley - FR Pharm S, FCQI CQP (Pharma Consult
+                          Global)</b
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img src="res/2.png" alt="Senior Director" width="60%" />
+                    </div>
+                  </div>
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        I worked closely with AODA Canada and it’s team for over
+                        a year. Harpal and his team implemented solutions which
+                        involved ensuring that all parties to the project both
+                        internal to Moody’s and our external partner were able
+                        to deliver their parts of the implementation. Harpal was
+                        integral to the success of the project which was
+                        delivered within expected timelines and to quality
+                        standards. Not only did he provide excellent project
+                        management skills and help our developers to comply with
+                        AODA Web Implementation, carefully tracking and
+                        monitoring the progress of all parties and
+                        diplomatically keeping everyone on track, he brought
+                        tremendous knowledge of the Web2.0 business, helping
+                        with problem solving and making many valuable
+                        suggestions along the way. <br />
+                        I would definitely welcome the opportunity to work with
+                        AODA Canada again if the opportunity arose.
+                      </p>
+                      <br />
+                      <p>
+                        <b>
+                          Marshall Beyer (Senior Director Moody's Analytics
+                          Global Education)</b
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img src="./res/3.png" alt="AMIDIS AG" width="60%" />
+                    </div>
+                  </div>
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        It was a good experience to work with AODA Canada team
+                        to comply our financial courses to deliver our Canadian
+                        banking industry. Our goals were over achieved. We
+                        especially would like to mention their responsiveness.
+                        <br />
+                        I would definitely welcome the opportunity to work with
+                        AODA Canada again if the opportunity arose.
+                      </p>
+                      <br />
+                      <p><b> Daniel Carotta (AMIDIS AG)</b></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img
+                        src="res/4.png"
+                        alt="Managing Partner(Titanium Partners)"
+                        width="60%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        Titanium Partners has been working with AODA Canada
+                        right from the start. Bernice, AODA consultant has
+                        always been there when we have needed her. We would (and
+                        have) recommended AODA Canada to anyone who needs to
+                        comply with AODA and 508 (US Compliance)
+
+                        <br />
+                      </p>
+                      <br />
+                      <p>
+                        <b>
+                          Ifti Ahmed - Managing Partner (Titanium Partners)</b
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img
+                        src="./res/5.png"
+                        alt="Global Training Group"
+                        width="60%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        I am impressed by the quality of the compliance training
+                        designed by AODA Canada from the raw PowerPoint content
+                        that I provided. Their AODA Learning Management System
+                        (LMS) is top notch and exhaustive. I was up and running
+                        quickly and now I am fully compliant that AODA Canada
+                        helped me. Very professional, I am impressed. Thanks,
+                        AODA Canada!!
+                        <br />
+                      </p>
+                      <br />
+                      <p>
+                        <b>Dan Day Robinson (Global Training Group)</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12 page-content">
+            <div class="adds-wrapper">
+              <div class="item-list">
+                <div class="row">
+                  <div class="col-sm-4 no-padding photobox">
+                    <div class="add-image">
+                      <img
+                        src="./res/6.png"
+                        alt="Managing Director | Executive recruiter"
+                        width="60%"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-sm-8 add-desc-box">
+                    <div class="add-details">
+                      <p>
+                        "I have known Harpal from the beginning of his
+                        professional careers. I had already identified him and
+                        his team as a precious little gem. Characterised by a so
+                        positive energy and attitude, his vibrating charisma and
+                        his professionalism decided me to collaborate with him
+                        and I never regretted it. For the last 10 years, Harpal
+                        has developed his professional skills and personality
+                        through various positions, companies and countries. His
+                        flexibility coupled with his creativity and in-depth
+                        knowledge made him a significant partner and support for
+                        the development of my business. The little gem has
+                        become an accomplished professional with very strong
+                        communication skills and willingness to make things
+                        happen. Harpal never see a problem as a problem but he
+                        would rather just focus on the solution making you feel
+                        so secure about the outcome. He always comes up with new
+                        and fresh ideas and do not hesitate to lift you up in
+                        case you need a boost of motivation. It is always a
+                        great pleasure to connect and collaborate with him. I
+                        strongly recommend Harpal for any project related to
+                        website compliance and AODA solution and many other IT
+                        related project. Thank you Harpal for our rich
+                        collaboration and thank you for being so generous in
+                        your work."
+                        <br />
+                      </p>
+                      <br />
+                      <p>
+                        <b>
+                          Carole De Bruyn - Managing Director | Executive
+                          recruiter</b
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center">
+        <p><a href="#body">Back to top</a></p>
+      </div>
+    </main>
+    <!-- Footer Begins -->
+    <footer>
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-8 col-xs-12 wow fadeIn animated animated f-left"
+              data-wow-delay="0.2s"
+              style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">
+                  Accessibility for Ontarians with Disabilities Act
+                </h2>
+
+                <p>Copyright AODA.ca Inc. ©2019</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4  col-xs-12 wow fadeIn animated animated f-right"
+              data-wow-delay="0.6s"
+              style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;"
+            >
+              <div class="widget">
+                <h2 class="block-title">Contact Information</h2>
+                <div class="twitter-content clearfix">
+                  <p>
+                    aoda@aodacanada.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- body ends here -->
+    <!-- <script
+      type="text/javascript"
+      src="//acc.magixite.com/license/la?litk=ok57qgkpx6"
+    ></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
