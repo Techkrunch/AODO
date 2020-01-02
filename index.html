@@ -19,27 +19,14 @@
   </head>
 
   <body>
-    <nav class="navbar nav">
-      <em class="logo">
-        <img
-          src="logo.png"
-          width="30"
-          height="30"
-          class="logo"
-          alt=""
-          title="Home"
-          aria-label="Home"
-        />
-        <a href="index.html" title="Home" aria-label="Home" class="full-text">
+    <div class="navbar nav">
+      <em class="logo" alt="AODO Logo">
+        <img src="logo.png" width="30" height="30" class="logo" title="Home" />
+        <a href="index.html" title="Home" class="full-text">
           Accessibility for Ontarians with Disabilities Act
         </a>
 
-        <a
-          href="/"
-          title="Home_Mobile"
-          aria-label="Home_Mobile"
-          class="abbr-text"
-        >
+        <a href="/" title="Home_Mobile" class="abbr-text">
           AODA Accessibility
         </a>
       </em>
@@ -48,13 +35,11 @@
         class="btn btn-warning"
         onclick="return toggleContrast();"
         id="contrast-link"
-        role="checkbox"
-        aria-checked="false"
       >
         High Contrast
       </button>
-    </nav>
-    <nav class="no_nav">
+    </div>
+    <div class="no_nav">
       <ul>
         <li>
           <a href="index.html" class="active "
@@ -92,14 +77,13 @@
           >
         </li>
       </ul>
-    </nav>
+    </div>
     <script>
       function setContrastHigh() {
         document.body.classList.add("high-contrast");
         document.getElementById("contrast-link").innerHTML = "Reset contrast";
         document
-          .getElementById("contrast-link")
-          .setAttribute("aria-checked", "true");
+          .getElementById("contrast-link") 
         set_cookie("style", "high-contrast");
       }
 
@@ -107,8 +91,7 @@
         document.body.classList.remove("high-contrast");
         document.getElementById("contrast-link").innerHTML = "High contrast";
         document
-          .getElementById("contrast-link")
-          .setAttribute("aria-checked", "false");
+          .getElementById("contrast-link") 
         delete_cookie("style");
       }
 
@@ -146,8 +129,10 @@
           name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
       }
     </script>
-    <main class="page-content page-pad" id="body">
-      <h1 class="add-title center ">Defining AODA Web</h1>
+    <div class="page-content page-pad" id="body">
+      
+        <h1>Defining AODA Web</h1>
+     
       <div class="ad-detail-content">
         <p>
           The Accessibility for Ontarians with Disabilities Act (AODA) aims to
@@ -158,16 +143,16 @@
         </p>
 
         <br />
-        <h2 class="add-title">AODA Web deadlines</h2>
+          <h2 class="add-title">AODA Web deadlines</h2>
         <p>
           “Beginning January 1, 2021: all public websites and web content posted
           after January 1, 2012 must meet WCAG 2.0 Level AA other than criteria
           1.2.4 (live captions) and 1.2.5 (pre-recorded audio descriptions)” -
           Government of Ontario
-        </p>
+        </p> 
         <hr />
-
-        <h2 class="add-title">AODA Web accessibility requirements.</h2>
+         
+        <h3 class="add-title">AODA Web accessibility requirements.</h3>
 
         <p>
           Each guideline has three levels of accessibility: A, AA and AAA.
@@ -182,7 +167,7 @@
               Meeting Level AAA is not required at this time.
             </li>
           </ul>
-        </blockquote>
+        </blockquote>  
         <hr />
         <h2 class="add-title">How AODA Canada helps you comply.</h2>
 
@@ -201,9 +186,9 @@
       <div class="center">
         <p><a href="#body">Back to top</a></p>
       </div>
-    </main>
+    </div>
     <footer>
-      <section class="footer-Content">
+      <div class="footer-Content">
         <div class="container">
           <div class="row">
             <div
@@ -237,12 +222,9 @@
           </div>
         </div>
       </section>
-    </footer>
+    </footer>    
     <!-- content ends here -->
-    <script
-      type="text/javascript"
-      src="//acc.magixite.com/license/la?litk=ok57qgkpx6"
-    ></script>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

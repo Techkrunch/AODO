@@ -22,21 +22,18 @@
     />
   </head>
   <body>
-    <nav class="navbar nav">
+    <div class="navbar nav">
       <em class="logo">
         <img
           src="../logo.png"
           width="30"
           height="30"
           class="logo"
-          alt=""
           title="Home"
-          aria-label="Home"
         />
         <a
           href="../index.html"
-          title="Home"
-          aria-label="Home"
+          title="Home" 
           class="full-text"
         >
           Accessibility for Ontarians with Disabilities Act
@@ -44,8 +41,7 @@
 
         <a
           href="../"
-          title="Home_Mobile"
-          aria-label="Home_Mobile"
+          title="Home_Mobile" 
           class="abbr-text"
         >
           AODA Accessibility
@@ -56,13 +52,11 @@
         class="btn btn-warning"
         onclick="return toggleContrast();"
         id="contrast-link"
-        role="checkbox"
-        aria-checked="false"
       >
         High Contrast
       </button>
-    </nav>
-    <nav class="no_nav">
+    </div>
+    <div class="no_nav">
       <ul>
         <li>
           <a href="../index.html" class=""><span>Defining AODA Web</span></a>
@@ -100,14 +94,13 @@
           >
         </li>
       </ul>
-    </nav>
+    </div>
     <script>
       function setContrastHigh() {
         document.body.classList.add("high-contrast");
         document.getElementById("contrast-link").innerHTML = "Reset contrast";
         document
-          .getElementById("contrast-link")
-          .setAttribute("aria-checked", "true");
+          .getElementById("contrast-link") 
         set_cookie("style", "high-contrast");
       }
 
@@ -115,8 +108,7 @@
         document.body.classList.remove("high-contrast");
         document.getElementById("contrast-link").innerHTML = "High contrast";
         document
-          .getElementById("contrast-link")
-          .setAttribute("aria-checked", "false");
+          .getElementById("contrast-link") 
         delete_cookie("style");
       }
 
@@ -155,7 +147,7 @@
     </script>
 
     <!-- body begins here -->
-    <main class="page-content page-pad" id="body">
+    <div class="page-content page-pad" id="body">
       <h1 class="add-title center">Contact AODA Canada</h1>
       <hr class="invisible" />
 
@@ -218,10 +210,10 @@
           </div>
         </div>
       </div>
-    </main>
+    </div>
     <!-- Footer Begins -->
-    <footer>
-      <section class="footer-Content">
+  <footer>
+      <div class="footer-Content">
         <div class="container">
           <div class="row">
             <div
